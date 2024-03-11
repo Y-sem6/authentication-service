@@ -27,6 +27,8 @@ target/
 /.nb-gradle/
 build/
 !**/src/main/**/build/
+
+.idea/workspace.xml
 !**/src/test/**/build/
 
 ### VS Code ###
