@@ -5,11 +5,11 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
-      # Start individual Docker container to see if that works (replace with project Docker container later)
-      - name: Start Docker container
-        run: docker run -d -p 8081:8081 --name auth_container y-apigateway:v1
-      - name: Wait for container to start
-        run: sleep 10
+      # # Start individual Docker container to see if that works (replace with project Docker container later)
+      # - name: Start Docker container
+      #   run: docker run -d -p 8081:8081 --name auth_container y-apigateway:v1
+      # - name: Wait for container to start
+      #   run: sleep 10
       - name: Run JMeter Tests
         uses: QAInsights/PerfAction@v5.6.2
         with:
