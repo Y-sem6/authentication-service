@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Build
-          path: Build/*.jar
+          path: Build.zip/*.jar
           
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -51,7 +51,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: my-artifact
+          name: Build
           path: Build/*.jar
         
       - name: Build and push Docker image
