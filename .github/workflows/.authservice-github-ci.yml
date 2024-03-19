@@ -55,7 +55,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: 
+          tags: y/authservice:latest
 
 
 ### deploy en release komen later in de development fase
