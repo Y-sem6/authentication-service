@@ -27,7 +27,7 @@ jobs:
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
-          name: vandalen/y-authservice
+          name: Build
           path: target/*.jar
           
   # push_to_registry:
@@ -51,12 +51,12 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: vandalen/y-authservice
+          name: Build
           path: .
         
       - name: Build and push Docker image
         run: |
-          docker build . --file Dockerfile --tag vandalen/y-authservice:$(date +%s)
+          docker build . --file Dockerfile --tag testsupertesttag
           # docker push vandalen/y-authservice:latest
 
       - name: Docker Push
