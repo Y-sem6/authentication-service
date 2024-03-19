@@ -24,10 +24,10 @@ jobs:
         env:
           CI: false
       - name: Upload JAR
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jar
-          path: file.jar
+          path: ./app.jar
           
   push_to_registry:
     name: Push Docker image to Docker Hub
