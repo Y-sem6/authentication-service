@@ -51,8 +51,8 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: authentication-service
-          path: Build.zip/*.jar
+          name: Build
+          path: .
         
       - name: Build and push Docker image
         run: |
