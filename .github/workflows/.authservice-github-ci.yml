@@ -61,7 +61,7 @@ jobs:
 
       - name: Docker Push
         run: |
-          docker push vandalen/y-authservice
+          docker push testsupertesttag
 
       # - name: Build and push
       #   uses: docker/build-push-action@v5
