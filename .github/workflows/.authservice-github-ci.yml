@@ -24,10 +24,6 @@ jobs:
         env:
           CI: false
           
-      - name: Copy out file from volume
-        run: |
-         sudo cp /**/*.jar /home/
-          
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
