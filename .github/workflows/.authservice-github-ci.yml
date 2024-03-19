@@ -50,11 +50,14 @@ jobs:
       #     password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Download Artifact
         uses: actions/download-artifact@v4
+        with:
+          name: authentication-service-0.0.1-SNAPSHOT
+          path: target/*.jar
         
       - name: Build and push Docker image
         run: |
           docker build . --file Dockerfile --tag vandalen/y-authservice:$(date +%s)
-          docker push vandalen/y-authservice:latest
+          # docker push vandalen/y-authservice:latest
 
       - name: Docker Push
         run: |
