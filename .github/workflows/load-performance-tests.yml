@@ -5,6 +5,8 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
+      - name: Start Contaniner
+        run: docker run -d -p 8081:8081 --name dockie vandalen/y-authservice:latest
       - name: Wait for container to start
         run: sleep 10
       - name: Run JMeter Tests
